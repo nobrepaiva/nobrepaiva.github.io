@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nobre Brigaderia</title>
+    <style>
+        /* Estilos CSS para a página */
+        body {
+            font-family: Times New Roman, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        header, footer {
+            background-color: #722F37;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #8F4854;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+        section {
+            padding: 20px;
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        .contact-form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #8F4854;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        /* Flexbox para seções */
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .flex-item {
+            flex: 1;
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 768px) {
+            .flex-container {
+                flex-direction: column;
+            }
+            .flex-item {
+                margin-right: 0;
+            }
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Nobre Brigaderia</h1>
+    </header>
+
+    <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#info">Info</a>
+        <a href="#preços">Preços</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="flex-container">
+        <section id="sobre" class="container flex-item">
+            <h2>Sobre Nós</h2>
+            <p>Uma empresa familiar, criada em 2016, cresceu exponencialmente nos últimos anos e atualmente conta com mais de 4 lojas espalhadas por São Paulo!</p>
+            <img src="brigadeiros.jpg" alt="Sobre a Nobre Brigaderia">
+        </section>
+
+        <section id="produtos" class="container flex-item">
+            <h2>Produtos</h2>
+            <ul>
+                <li>Brigadeiros Tradicionais</li>
+                <li>Brigadeiros Gourmets</li>
+                <li>Doces finos</li>
+            </ul>
+            <img src="brigadeiros4.jpg" alt="Produtos da Nobre Brigaderia">
+        </section>
+
+        <section id="info" class="container flex-item">
+            <h2>Informações</h2>
+            <ul>
+                <li>Os nossos produtos são feitos com ingredientes de primeira qualidade, enviados com embalagens estampadas, contando com personalização caso solicitado.</li>
+            </ul>
+            <img src="brigadeiros3.jpg" alt="Informações sobre a Nobre Brigaderia">
+        </section>
+        
+        <section id="preços" class="container flex-item">
+            <h2>Preços</h2>
+            <ul>
+                <li>Brigadeiros tradicionais: R$5,00</li>
+                <li>Brigadeiros Gourmets: R$7,00</li>
+                <li>Doces Finos: a partir de R$1,00</li>
+                <li>Obs: Brigadeiros possuem aproximadamente 80g, doces finos 20g (ambos sob encomenda).</li>
+            </ul>
+            <img src="brigadeiros2.jpg" alt="Preços dos produtos da Nobre Brigaderia">
+        </section>
+    </div>
+
+    <section id="contato" class="container">
+        <h2>Para encomendas, entre em contato:</h2>
+        <div class="contact-form">
+            <form action="enviar.php" method="POST">
+                <input type="text" name="nome" placeholder="Nome" required>
+                <input type="text" name="telefone" placeholder="Telefone" required>
+                <input type="text" name="mensagem" placeholder="Mensagem" required>
+                <input type="submit" value="Enviar Mensagem">
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>Nobre Brigaderia - Para adoçar seu dia</p>
+    </footer>
+</body>
+</html>
